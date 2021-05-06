@@ -29,3 +29,6 @@ setup-requirements: setup-virtualenv
 # ====
 test: setup-requirements
 	$(pytest) tests -vvv --diff-type=unified --no-hints
+
+test-trouble: setup-requirements
+	$(pytest) tests -vvv --diff-type=unified --no-hints -k "cratedb and ddpsql and fast"

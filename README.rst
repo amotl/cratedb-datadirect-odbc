@@ -121,11 +121,41 @@ This exception has been observed once::
     E       pyodbc.ProgrammingError: No results.  Previous SQL was not a query.
 
 
-.. note::
+Trace logs
+==========
 
-    - TODO: Check ``sys.jobs_log``?
-    - Enable other tracing options?
+Apply
+-----
 
+In order to enable corresponding tracing options, invoke those SQL statements::
+
+    SET GLOBAL 'logger.io.crate.action.sql' = 'TRACE';
+    SET GLOBAL 'logger.io.crate.protocols.postgres' = 'TRACE';
+
+Apply them using either Admin UI, crash, or psql, like::
+
+    psql postgres://crate@localhost:6432 --command "SET GLOBAL 'logger.io.crate.action.sql' = 'TRACE';"
+    psql postgres://crate@localhost:6432 --command "SET GLOBAL 'logger.io.crate.protocols.postgres' = 'TRACE';"
+
+Then, run the offending database workload, like::
+
+    pytest -k "cratedb and ddpsql and many and fast" -vvv
+
+Evaluate
+--------
+
+In order to get meaningful insights into the log files, the ``./reports``
+folder contains trace logs of particular spots of the test suite as well
+as corresponding comparison reports in form of diff files.
+
+To produce those, the database workload has been invoked using both
+``executemany`` vs. the ``fast_executemany`` strategies on each driver,
+``ddpsql`` vs. ``psqlodbc``.
+
+The results from those comparisons have been sanitized, diffed and stored at:
+
+- ``./reports/01-trace/ddpsql.diff``
+- ``./reports/01-trace/psqlodbc.diff``
 
 
 .. _Progress DataDirect PostgreSQL ODBC Driver: https://www.progress.com/odbc/postgresql
