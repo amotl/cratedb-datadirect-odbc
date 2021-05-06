@@ -1,0 +1,4 @@
+pyodbc>=4.0.30,<5
+pytest>=6,<7
+pytest-clarity
+six
