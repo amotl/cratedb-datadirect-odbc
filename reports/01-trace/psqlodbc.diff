@@ -1,0 +1,295 @@
+channel opened: [id: 0xb9037705, L:/172.17.0.2:5432 - R:/172.17.0.1:57496]                         |    channel opened: [id: 0xd1aefcbf, L:/172.17.0.2:5432 - R:/172.17.0.1:57502]
+s] Header pkgLength: 25                                                                                 s] Header pkgLength: 25
+s] protocol 3.0                                                                                         s] protocol 3.0
+s] payload: key=user value=crate                                                                        s] payload: key=user value=crate
+s] payload: key=database value=doc                                                                      s] payload: key=database value=doc
+s] payload: key= value=null                                                                             s] payload: key= value=null
+s] Authentication succeeded user "crate" and method "trust".                                            s] Authentication succeeded user "crate" and method "trust".
+sentAuthenticationOK                                                                                    sentAuthenticationOK
+sentParameterStatus crate_version=4.5.1                                                                 sentParameterStatus crate_version=4.5.1
+sentParameterStatus server_version=10.5                                                                 sentParameterStatus server_version=10.5
+sentParameterStatus server_encoding=UTF8                                                                sentParameterStatus server_encoding=UTF8
+sentParameterStatus client_encoding=UTF8                                                                sentParameterStatus client_encoding=UTF8
+sentParameterStatus datestyle=ISO                                                                       sentParameterStatus datestyle=ISO
+sentParameterStatus TimeZone=UTC                                                                        sentParameterStatus TimeZone=UTC
+sentParameterStatus integer_datetimes=on                                                                sentParameterStatus integer_datetimes=on
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=76 readableBytes=76                                                                  s] msg=Q msgLength=76 readableBytes=76
+method=parse stmtName= query=SET DateStyle = 'ISO'; paramTypes=[]                                       method=parse stmtName= query=SET DateStyle = 'ISO'; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+SET SESSION STATEMENT WILL BE IGNORED: datestyle                                                        SET SESSION STATEMENT WILL BE IGNORED: datestyle
+sentCommandComplete                                                                                     sentCommandComplete
+method=parse stmtName= query=SET extra_float_digits = 2; paramTypes=[]                                  method=parse stmtName= query=SET extra_float_digits = 2; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+SET SESSION STATEMENT WILL BE IGNORED: extra_float_digits                                               SET SESSION STATEMENT WILL BE IGNORED: extra_float_digits
+sentCommandComplete                                                                                     sentCommandComplete
+method=parse stmtName= query=show transaction_isolation paramTypes=[]                                   method=parse stmtName= query=show transaction_isolation paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentRowDescription                                                                                      sentRowDescription
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=58 readableBytes=58                                                                  s] msg=Q msgLength=58 readableBytes=58
+method=parse stmtName= query=select oid, typbasetype from pg_type where typname = 'lo' paramType        method=parse stmtName= query=select oid, typbasetype from pg_type where typname = 'lo' paramType
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentRowDescription                                                                                      sentRowDescription
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=34 readableBytes=34                                                                  s] msg=Q msgLength=34 readableBytes=34
+method=parse stmtName= query=BEGIN; paramTypes=[]                                                       method=parse stmtName= query=BEGIN; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+method=parse stmtName= query=DROP TABLE IF EXISTS users; paramTypes=[]                                  method=parse stmtName= query=DROP TABLE IF EXISTS users; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+ [Badus] [users/o6QhRQvYQRC0ZNbIrZasOA] deleting index                                             |     [Badus] [users/OtENzfCMQpqgiYwFSG9Bbg] deleting index
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=61 readableBytes=61                                                                  s] msg=Q msgLength=61 readableBytes=61
+method=parse stmtName= query=BEGIN; paramTypes=[]                                                       method=parse stmtName= query=BEGIN; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+method=parse stmtName= query=CREATE TABLE users ("id" BIGINT, "name" VARCHAR(255)); paramTypes=[        method=parse stmtName= query=CREATE TABLE users ("id" BIGINT, "name" VARCHAR(255)); paramTypes=[
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+ [Badus] [users] creating index, cause [api], templates [crate_defaults], shards [4]/[0], mappin         [Badus] [users] creating index, cause [api], templates [crate_defaults], shards [4]/[0], mappin
+] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[users][0]]])        ] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[users][0]]])
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+                                                                                                   >    s] msg=P msgLength=75 readableBytes=75
+                                                                                                   >    method=parse stmtName=_PLAN0x56441b49d8e0 query=INSERT INTO users (id, name) VALUES ($1, $2) par
+                                                                                                   >    s] msg=S msgLength=0 readableBytes=0
+                                                                                                   >    method=sync deferredExecutions=0
+                                                                                                   >    sentParseComplete
+                                                                                                   >    sentReadyForQuery
+                                                                                                   >    s] msg=D msgLength=21 readableBytes=21
+                                                                                                   >    method=describe type=S portalOrStatement=_PLAN0x56441b49d8e0
+                                                                                                   >    s] msg=S msgLength=0 readableBytes=0
+                                                                                                   >    method=sync deferredExecutions=0
+                                                                                                   >    sentNoData
+                                                                                                   >    sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=P msgLength=75 readableBytes=75                                                             <
+method=parse stmtName=_PLAN0x55c2d9fcfe70 query=INSERT INTO users (id, name) VALUES ($1, $2) par   <
+s] msg=S msgLength=0 readableBytes=0                                                               <
+method=sync deferredExecutions=0                                                                   <
+sentParseComplete                                                                                  <
+sentReadyForQuery                                                                                  <
+s] msg=D msgLength=21 readableBytes=21                                                             <
+method=describe type=S portalOrStatement=_PLAN0x55c2d9fcfe70                                       <
+s] msg=S msgLength=0 readableBytes=0                                                               <
+method=sync deferredExecutions=0                                                                   <
+sentNoData                                                                                         <
+sentReadyForQuery                                                                                  <
+s] msg=B msgLength=47 readableBytes=47                                                                  s] msg=B msgLength=47 readableBytes=47
+method=bind portalName= statementName=_PLAN0x55c2d9fcfe70 params=[1, User1]                        |    method=bind portalName= statementName=_PLAN0x56441b49d8e0 params=[1, User1]
+s] msg=D msgLength=2 readableBytes=2                                                                    s] msg=D msgLength=2 readableBytes=2
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+s] msg=E msgLength=5 readableBytes=5                                                                    s] msg=E msgLength=5 readableBytes=5
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+s] msg=S msgLength=0 readableBytes=0                                                                    s] msg=S msgLength=0 readableBytes=0
+sentBindComplete                                                                                        sentBindComplete
+sentNoData                                                                                              sentNoData
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=B msgLength=47 readableBytes=47                                                                  s] msg=B msgLength=47 readableBytes=47
+method=bind portalName= statementName=_PLAN0x55c2d9fcfe70 params=[2, User2]                        |    method=bind portalName= statementName=_PLAN0x56441b49d8e0 params=[2, User2]
+s] msg=D msgLength=2 readableBytes=2                                                                    s] msg=D msgLength=2 readableBytes=2
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+s] msg=E msgLength=5 readableBytes=5                                                                    s] msg=E msgLength=5 readableBytes=5
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+s] msg=S msgLength=0 readableBytes=0                                                                    s] msg=S msgLength=0 readableBytes=0
+sentBindComplete                                                                                        sentBindComplete
+sentNoData                                                                                              sentNoData
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=B msgLength=47 readableBytes=47                                                                  s] msg=B msgLength=47 readableBytes=47
+method=bind portalName= statementName=_PLAN0x55c2d9fcfe70 params=[3, User3]                        |    method=bind portalName= statementName=_PLAN0x56441b49d8e0 params=[3, User3]
+s] msg=D msgLength=2 readableBytes=2                                                                    s] msg=D msgLength=2 readableBytes=2
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+s] msg=E msgLength=5 readableBytes=5                                                                    s] msg=E msgLength=5 readableBytes=5
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+s] msg=S msgLength=0 readableBytes=0                                                                    s] msg=S msgLength=0 readableBytes=0
+sentBindComplete                                                                                        sentBindComplete
+sentNoData                                                                                              sentNoData
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=B msgLength=47 readableBytes=47                                                                  s] msg=B msgLength=47 readableBytes=47
+method=bind portalName= statementName=_PLAN0x55c2d9fcfe70 params=[4, User4]                        |    method=bind portalName= statementName=_PLAN0x56441b49d8e0 params=[4, User4]
+s] msg=D msgLength=2 readableBytes=2                                                                    s] msg=D msgLength=2 readableBytes=2
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+s] msg=E msgLength=5 readableBytes=5                                                                    s] msg=E msgLength=5 readableBytes=5
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+s] msg=S msgLength=0 readableBytes=0                                                                    s] msg=S msgLength=0 readableBytes=0
+sentBindComplete                                                                                        sentBindComplete
+sentNoData                                                                                              sentNoData
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=6 readableBytes=6                                                                    s] msg=Q msgLength=6 readableBytes=6
+method=parse stmtName= query=BEGIN paramTypes=[]                                                        method=parse stmtName= query=BEGIN paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=B msgLength=47 readableBytes=47                                                                  s] msg=B msgLength=47 readableBytes=47
+method=bind portalName= statementName=_PLAN0x55c2d9fcfe70 params=[5, User5]                        |    method=bind portalName= statementName=_PLAN0x56441b49d8e0 params=[5, User5]
+s] msg=D msgLength=2 readableBytes=2                                                                    s] msg=D msgLength=2 readableBytes=2
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+s] msg=E msgLength=5 readableBytes=5                                                                    s] msg=E msgLength=5 readableBytes=5
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+s] msg=S msgLength=0 readableBytes=0                                                                    s] msg=S msgLength=0 readableBytes=0
+sentBindComplete                                                                                        sentBindComplete
+sentNoData                                                                                              sentNoData
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=33 readableBytes=33                                                                  s] msg=Q msgLength=33 readableBytes=33
+method=parse stmtName= query=DEALLOCATE "_PLAN0x55c2d9fcfe70" paramTypes=[]                        |    method=parse stmtName= query=DEALLOCATE "_PLAN0x56441b49d8e0" paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+method=close type=S name=_PLAN0x55c2d9fcfe70                                                       |    method=close type=S name=_PLAN0x56441b49d8e0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=27 readableBytes=27                                                                  s] msg=Q msgLength=27 readableBytes=27
+method=parse stmtName= query=BEGIN; paramTypes=[]                                                       method=parse stmtName= query=BEGIN; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+method=parse stmtName= query=REFRESH TABLE users; paramTypes=[]                                         method=parse stmtName= query=REFRESH TABLE users; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=39 readableBytes=39                                                                  s] msg=Q msgLength=39 readableBytes=39
+method=parse stmtName= query=BEGIN; paramTypes=[]                                                       method=parse stmtName= query=BEGIN; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentCommandComplete                                                                                     sentCommandComplete
+method=sync deferredExecutions=0                                                                        method=sync deferredExecutions=0
+method=parse stmtName= query=SELECT * FROM users ORDER BY id; paramTypes=[]                             method=parse stmtName= query=SELECT * FROM users ORDER BY id; paramTypes=[]
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentRowDescription                                                                                      sentRowDescription
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=Q msgLength=693 readableBytes=693                                                                s] msg=Q msgLength=693 readableBytes=693
+method=parse stmtName= query=select n.nspname, c.relname, a.attname, a.atttypid, t.typname, a.at        method=parse stmtName= query=select n.nspname, c.relname, a.attname, a.atttypid, t.typname, a.at
+method=bind portalName= statementName= params=[]                                                        method=bind portalName= statementName= params=[]
+method=describe type=P portalOrStatement=                                                               method=describe type=P portalOrStatement=
+method=execute portalName= maxRows=0                                                                    method=execute portalName= maxRows=0
+sentRowDescription                                                                                      sentRowDescription
+sentCommandComplete                                                                                     sentCommandComplete
+sentReadyForQuery                                                                                       sentReadyForQuery
+s] msg=X msgLength=0 readableBytes=0                                                                    s] msg=X msgLength=0 readableBytes=0
+channel closed: [id: 0xb9037705, L:/172.17.0.2:5432 ! R:/172.17.0.1:57496]                         |    channel closed: [id: 0xd1aefcbf, L:/172.17.0.2:5432 ! R:/172.17.0.1:57502]
+s] channelDisconnected                                                                                  s] channelDisconnected
