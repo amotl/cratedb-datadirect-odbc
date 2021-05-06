@@ -1,6 +1,6 @@
-##############################################################
-Troubleshooting Progress DataDirect ODBC Driver for PostgreSQL
-##############################################################
+###########################################################################
+Troubleshooting CrateDB with Progress DataDirect ODBC Driver for PostgreSQL
+###########################################################################
 
 
 ************
@@ -8,7 +8,8 @@ Introduction
 ************
 
 This is an interesting ODBC/Python-related issue when using the
-`Progress DataDirect PostgreSQL ODBC Driver`_ to insert data using ``pyodbc``.
+`Progress DataDirect PostgreSQL ODBC Driver`_ to insert data using ``pyodbc``
+into CrateDB_.
 
 
 **************
@@ -67,7 +68,7 @@ Invoke testsuite on workstation::
     export LD_LIBRARY_PATH=$PWD/drivers/linux
     make test
 
-Invoke testsuite on Docker::
+Invoke testsuite on Docker (needed when not running Linux)::
 
     docker run -it --rm --network=host --volume=$PWD:/src python:3.9 bash
     apt-get update && apt-get install --yes unixodbc-dev
@@ -80,12 +81,19 @@ Invoke testsuite on Docker::
 Observations
 ************
 
+Test suite
+==========
+
 Indeed, when using the ``fast_executemany`` option with the *Progress
 DataDirect PostgreSQL ODBC Driver*, it is **occasionally** failing the test.
 
 All other variants covered by the testsuite always succeed. The
 ``fast_executemany`` option apparently also does no harm when using the
 *psqlODBC - PostgreSQL ODBC driver*.
+
+In order to specifically run those tests, invoke::
+
+    make test-trouble
 
 Test suite report fragment for ``fast_executemany @ ddpsql @ cratedb``::
 
@@ -100,7 +108,7 @@ Test suite report fragment for ``fast_executemany @ ddpsql @ cratedb``::
     tests/test_ddpsql.py::test_ddpsql_cratedb_executemany_fast[InsertStrategy.EXECUTEMANY_FAST-8] PASSED
     tests/test_ddpsql.py::test_ddpsql_cratedb_executemany_fast[InsertStrategy.EXECUTEMANY_FAST-9] FAILED
 
-The failed tests essentially demonstrate that the queried data is empty::
+The failed tests mostly demonstrate that the queried data is empty::
 
     >       assert result == reference_data
     E       AssertionError: assert left == right failed.
@@ -109,7 +117,16 @@ The failed tests essentially demonstrate that the queried data is empty::
     E          L []
     E          R [(1, 'User1'), (2, 'User2'), (3, 'User3'), (4, 'User4'), (5, 'User5')]
 
-This exception has been observed once::
+However, sometimes there is an anomaly like::
+
+    >       assert result == reference_data
+    E       AssertionError: assert left == right failed.
+    E         Showing unified diff (L=left, R=right):
+    E
+    E          L [(2, 'User2')]
+    E          R [(1, 'User1'), (2, 'User2'), (3, 'User3'), (4, 'User4'), (5, 'User5')]
+
+Occasionally, this exception can be observed::
 
     conn = <pyodbc.Connection object at 0x7f030955c8f0>
 
@@ -158,5 +175,6 @@ The results from those comparisons have been sanitized, diffed and stored at:
 - ``./reports/01-trace/psqlodbc.diff``
 
 
+.. _CrateDB: https://github.com/crate/crate
 .. _Progress DataDirect PostgreSQL ODBC Driver: https://www.progress.com/odbc/postgresql
 .. _psqlODBC - PostgreSQL ODBC driver: https://odbc.postgresql.org/
