@@ -1,0 +1,143 @@
+# pytest -k "cratedb and ddpsql and many and fast" -vvv
+
+[2021-05-06T15:18:11,610][TRACE][i.c.p.p.PostgresNetty    ] [Badus] channel opened: [id: 0x6f195f28, L:/172.17.0.2:5432 - R:/172.17.0.1:57484]
+[2021-05-06T15:18:11,611][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] Header pkgLength: 44
+[2021-05-06T15:18:11,611][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] protocol 3.0
+[2021-05-06T15:18:11,612][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] payload: key=user value=crate
+[2021-05-06T15:18:11,612][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] payload: key=database value=doc
+[2021-05-06T15:18:11,612][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] payload: key=DateStyle value=ISO, YMD
+[2021-05-06T15:18:11,612][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] payload: key= value=null
+[2021-05-06T15:18:11,613][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] Authentication succeeded user "crate" and method "trust".
+[2021-05-06T15:18:11,613][TRACE][i.c.p.p.Messages         ] [Badus] sentAuthenticationOK
+[2021-05-06T15:18:11,614][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus crate_version=4.5.1
+[2021-05-06T15:18:11,614][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus server_version=10.5
+[2021-05-06T15:18:11,615][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus server_encoding=UTF8
+[2021-05-06T15:18:11,615][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus client_encoding=UTF8
+[2021-05-06T15:18:11,615][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus datestyle=ISO
+[2021-05-06T15:18:11,615][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus TimeZone=UTC
+[2021-05-06T15:18:11,615][TRACE][i.c.p.p.Messages         ] [Badus] sentParameterStatus integer_datetimes=on
+[2021-05-06T15:18:11,616][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,616][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=191 readableBytes=191
+[2021-05-06T15:18:11,616][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=SELECT t.oid FROM pg_catalog.pg_type t JOIN pg_catalog.pg_namespace n ON t.typnamespace = n.oid where t.typname = 'citext' and (n.nspname = (select current_schema()) or n.nspname = 'public') paramTypes=[]
+[2021-05-06T15:18:11,621][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,621][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,621][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,627][TRACE][i.c.p.p.Messages         ] [Badus] sentRowDescription
+[2021-05-06T15:18:11,627][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,628][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,628][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=58 readableBytes=58
+[2021-05-06T15:18:11,628][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=select version(); paramTypes=[]
+[2021-05-06T15:18:11,629][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,629][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,630][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,631][TRACE][i.c.p.p.Messages         ] [Badus] sentRowDescription
+[2021-05-06T15:18:11,632][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,632][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=select current_setting('max_index_keys') paramTypes=[]
+[2021-05-06T15:18:11,633][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,633][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,633][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,634][TRACE][i.c.p.p.Messages         ] [Badus] sentRowDescription
+[2021-05-06T15:18:11,634][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,634][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,638][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=6 readableBytes=6
+[2021-05-06T15:18:11,638][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=BEGIN paramTypes=[]
+[2021-05-06T15:18:11,638][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,639][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,639][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,639][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,639][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=sync deferredExecutions=0
+[2021-05-06T15:18:11,639][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,641][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=28 readableBytes=28
+[2021-05-06T15:18:11,641][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=DROP TABLE IF EXISTS users; paramTypes=[]
+[2021-05-06T15:18:11,642][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,642][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,642][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,645][INFO ][o.e.c.m.MetadataDeleteIndexService] [Badus] [users/pTnFYg3TQASx5R6YxZYrcg] deleting index
+[2021-05-06T15:18:11,664][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,665][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,665][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=55 readableBytes=55
+[2021-05-06T15:18:11,665][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=CREATE TABLE users ("id" BIGINT, "name" VARCHAR(255)); paramTypes=[]
+[2021-05-06T15:18:11,667][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,667][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,667][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,674][INFO ][o.e.c.m.MetadataCreateIndexService] [Badus] [users] creating index, cause [api], templates [crate_defaults], shards [4]/[0], mappings [default]
+[2021-05-06T15:18:11,732][INFO ][o.e.c.r.a.AllocationService] [Badus] Cluster health status changed from [YELLOW] to [GREEN] (reason: [shards started [[users][3], [users][1], [users][0]]]).
+[2021-05-06T15:18:11,741][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,742][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,744][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=P msgLength=63 readableBytes=63
+[2021-05-06T15:18:11,744][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName=ST55B7A1F2E910 query=INSERT INTO users (id, name) VALUES ($1, $2); paramTypes=[]
+[2021-05-06T15:18:11,746][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=D msgLength=16 readableBytes=16
+[2021-05-06T15:18:11,746][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=S portalOrStatement=ST55B7A1F2E910
+[2021-05-06T15:18:11,746][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=S msgLength=0 readableBytes=0
+[2021-05-06T15:18:11,746][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=sync deferredExecutions=0
+[2021-05-06T15:18:11,747][TRACE][i.c.p.p.Messages         ] [Badus] sentParseComplete
+[2021-05-06T15:18:11,747][TRACE][i.c.p.p.Messages         ] [Badus] sentNoData
+[2021-05-06T15:18:11,747][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,747][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=B msgLength=61 readableBytes=61
+[2021-05-06T15:18:11,748][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName=ST55B7A1F2E910 statementName=ST55B7A1F2E910 params=[1, User1]
+[2021-05-06T15:18:11,748][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=E msgLength=19 readableBytes=19
+[2021-05-06T15:18:11,748][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName=ST55B7A1F2E910 maxRows=0
+[2021-05-06T15:18:11,748][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=C msgLength=16 readableBytes=16
+[2021-05-06T15:18:11,748][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=close type=P name=ST55B7A1F2E910
+[2021-05-06T15:18:11,749][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=S msgLength=0 readableBytes=0
+[2021-05-06T15:18:11,754][TRACE][i.c.p.p.Messages         ] [Badus] sentBindComplete
+[2021-05-06T15:18:11,754][TRACE][i.c.p.p.Messages         ] [Badus] sentCloseComplete
+[2021-05-06T15:18:11,754][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,755][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,755][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=B msgLength=61 readableBytes=61
+[2021-05-06T15:18:11,755][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName=ST55B7A1F2E910 statementName=ST55B7A1F2E910 params=[2, User2]
+[2021-05-06T15:18:11,755][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=E msgLength=19 readableBytes=19
+[2021-05-06T15:18:11,755][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName=ST55B7A1F2E910 maxRows=0
+[2021-05-06T15:18:11,756][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=C msgLength=16 readableBytes=16
+[2021-05-06T15:18:11,756][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=close type=P name=ST55B7A1F2E910
+[2021-05-06T15:18:11,756][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=S msgLength=0 readableBytes=0
+[2021-05-06T15:18:11,757][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=7 readableBytes=7
+[2021-05-06T15:18:11,758][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=COMMIT paramTypes=[]
+[2021-05-06T15:18:11,758][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,758][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,758][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,759][TRACE][i.c.p.p.Messages         ] [Badus] sentBindComplete
+[2021-05-06T15:18:11,759][TRACE][i.c.p.p.Messages         ] [Badus] sentCloseComplete
+[2021-05-06T15:18:11,759][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,759][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=sync deferredExecutions=0
+[2021-05-06T15:18:11,760][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,760][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=27 readableBytes=27
+[2021-05-06T15:18:11,760][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=DEALLOCATE"ST55B7A1F2E910" paramTypes=[]
+[2021-05-06T15:18:11,761][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,761][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,761][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,761][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=close type=S name=ST55B7A1F2E910
+[2021-05-06T15:18:11,761][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,762][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=sync deferredExecutions=0
+[2021-05-06T15:18:11,762][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,762][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,762][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,763][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=6 readableBytes=6
+[2021-05-06T15:18:11,763][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=BEGIN paramTypes=[]
+[2021-05-06T15:18:11,763][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,763][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,763][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,763][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,764][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=sync deferredExecutions=0
+[2021-05-06T15:18:11,764][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,764][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=21 readableBytes=21
+[2021-05-06T15:18:11,764][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=REFRESH TABLE users; paramTypes=[]
+[2021-05-06T15:18:11,765][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,765][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,765][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,766][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=33 readableBytes=33
+[2021-05-06T15:18:11,766][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=SELECT * FROM users ORDER BY id; paramTypes=[]
+[2021-05-06T15:18:11,767][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=bind portalName= statementName= params=[]
+[2021-05-06T15:18:11,767][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=describe type=P portalOrStatement=
+[2021-05-06T15:18:11,767][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=execute portalName= maxRows=0
+[2021-05-06T15:18:11,770][TRACE][i.c.p.p.Messages         ] [Badus] sentRowDescription
+[2021-05-06T15:18:11,770][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,771][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,774][TRACE][i.c.p.p.Messages         ] [Badus] sentCommandComplete
+[2021-05-06T15:18:11,774][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,814][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] msg=Q msgLength=9 readableBytes=9
+[2021-05-06T15:18:11,814][DEBUG][i.c.a.s.SQLOperations    ] [Badus] method=parse stmtName= query=ROLLBACK paramTypes=[]
+[2021-05-06T15:18:11,816][TRACE][i.c.p.p.Messages         ] [Badus] sentErrorResponse msg=line 1:1: mismatched input 'ROLLBACK' expecting {'SELECT', 'DEALLOCATE', 'CREATE', 'ALTER', 'KILL', 'BEGIN', 'COMMIT', 'ANALYZE', 'DISCARD', 'EXPLAIN', 'SHOW', 'OPTIMIZE', 'REFRESH', 'RESTORE', 'DROP', 'INSERT', 'VALUES', 'DELETE', 'UPDATE', 'SET', 'RESET', 'COPY', 'GRANT', 'DENY', 'REVOKE'}
+[2021-05-06T15:18:11,817][TRACE][i.c.p.p.Messages         ] [Badus] sentReadyForQuery
+[2021-05-06T15:18:11,817][TRACE][i.c.p.p.PostgresNetty    ] [Badus] channel closed: [id: 0x6f195f28, L:/172.17.0.2:5432 ! R:/172.17.0.1:57484]
+[2021-05-06T15:18:11,817][TRACE][i.c.p.p.PostgresWireProtocol] [Badus] channelDisconnected
