@@ -1,7 +1,10 @@
+**The issue documented in this repository was resolved in Progress DataDirect ODBC for PostgreSQL version 08.02.0795.**
+
+----
+
 ###########################################################################
 Troubleshooting CrateDB with Progress DataDirect ODBC Driver for PostgreSQL
 ###########################################################################
-
 
 ************
 Introduction
